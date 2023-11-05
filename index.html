@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLMS Web App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .input-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .input-group button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .input-group button:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-info, .follow-us, .copyright {
+            color: #ffffff;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .input-group input[type="text"] {
+                font-size: 14px;
+            }
+
+            .input-group button {
+                font-size: 14px;
+            }
+
+            .contact-info, .follow-us, .copyright {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="book-list">
+            <h2>Book List</h2>
+            <ul>
+                <li>Title: Book One <br>Author: Abbas <br>ISBN: 1234567890</li>
+                <li>Title: Book Two<br> Author: Zaheer <br>ISBN: 9876543210</li>
+            </ul>
+        </div>
+
+        <div class="add-book">
+            <h2>Add New Book</h2>
+            <form id="add-book-form">
+                <div class="input-group">
+                    <label for="title">Title:</label>
+                    <input type="text" placeholder="Title" id="title" required>
+                </div>
+                <div class="input-group">
+                    <label for="author">Author:</label>
+                    <input type="text" placeholder="Author" id="author" required>
+                </div>
+                <div class="input-group">
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" placeholder="ISBN" id="isbn" required>
+                </div>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+
+        <div class="search-books">
+            <h2>Search Books</h2>
+            <div class="input-group">
+                <input type="text" id="search-query" placeholder="Search by Title or Author">
+                <button type="button" onclick="searchBooks">Search</button>
+            </div>
+        </div>
+
+        <div class="delete-book">
+            <h2>Delete Book</h2>
+            <form id="delete-book-form">
+                <div class="input-group">
+                    <label for="delete-isbn">ISBN:</label>
+                    <input type="text" placeholder="ISBN" id="delete-isbn" required>
+                </div>
+                <button type="submit">Delete Book</button>
+            </form>
+        </div>
+    </div>
+
+    <footer style="background-color: rgb(38, 187, 24); color: #fff; padding: 18px; text-align: center;">
+        <p class="contact-info">Contact us at: <a href="mailto:22pwbcs0933@uetpeshawar.edu.pk" style="color: #fff; text-decoration: none;">22pwbcs0904@uetpeshawar.edu.pk</a></p>
+        <div class="follow-us">
+            Follow us on:
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="copyright">
+            Copyright © <script>document.write(new Date().getFullYear());</script> Abbas Book
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
